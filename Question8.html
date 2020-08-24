@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <p>The sort() method sorts an array by Id</p>
+
+    <button onclick="myFunction()">Click to sort</button>
+
+    <p id="demo"></p>
+    <script>
+        var obj = [
+          { id:4, name:"abc"},
+          { id:10,name:"ab2" },
+          { id:5,name:"abc3" },
+          { id:6, name:"abc5"}
+        ];
+        
+        displayobj();
+        
+        function myFunction() {
+          obj.sort(function(a, b){return a.id - b.id});
+          displayobj();
+        }
+        
+        function displayobj() {
+          document.getElementById("demo").innerHTML =
+          obj[0].name + " " + obj[0].id + "<br>" +
+          obj[1].name + " " + obj[1].id + "<br>" +
+          obj[2].name + " " + obj[2].id + "<br>" +
+          obj[3].name + " " + obj[3].id;
+        }
+        </script>
+
+</body>
+
+</html>
